@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/framelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradientred"
+    tools:context=".UploadRecipe">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/goback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_arrow_back_ios_24px"
+            android:fontFamily="@font/open_sans"
+            android:gravity="center|left"
+            android:text="Go Back"
+            android:textColor="@color/white"
+            app:drawableTint="@color/white" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/uploadrecipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/main2"
+                android:fontFamily="@font/montserrat"
+                android:text="Upload"
+                android:textSize="12sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/upperoundedback">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans"
+                android:text="Recipe Details"
+                android:textColor="@color/main1"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/pureblack"
+                android:theme="@style/AppSearchView">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/addrecipename"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/open_sans"
+                    android:hint="Recipe Name *"
+                    android:textSize="12sp"
+                    android:theme="@style/AppSearchView" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/pureblack"
+                    android:theme="@style/AppSearchView">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/addrecipetime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/open_sans"
+                        android:hint="Time to cook *"
+                        android:textSize="12sp"
+                        android:theme="@style/AppSearchView" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/pureblack"
+                    android:theme="@style/AppSearchView">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/addrecipeserv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/open_sans"
+                        android:hint="Servings *"
+                        android:textSize="12sp"
+                        android:theme="@style/AppSearchView" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="Recipe Difficulty"
+                android:textColor="@color/pureblack"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButton6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/main2"
+                    android:checked="true"
+                    android:text="Easy" />
+
+                <RadioButton
+                    android:id="@+id/radioButton7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/main2"
+                    android:text="Medium" />
+
+                <RadioButton
+                    android:id="@+id/radioButton8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/main2"
+                    android:text="Hard" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Add Equipments"
+                android:textColor="@color/pureblack"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingTop="15dp">
+
+                <EditText
+                    android:id="@+id/addEquipmentName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_smcurv_border"
+                    android:elevation="3dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:theme="@style/AppSearchView" />
+
+                <Button
+                    android:id="@+id/addEquipment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:elevation="2dp"
+                    android:fontFamily="@font/open_sans"
+                    android:text="Add"
+                    android:textAllCaps="false"
+                    android:textColor="@color/main2" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/equipmentrecycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Add Ingredients"
+                android:textColor="@color/pureblack"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingTop="15dp">
+
+                <EditText
+                    android:id="@+id/addIngredientsName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_smcurv_border"
+                    android:elevation="3dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:theme="@style/AppSearchView" />
+
+                <Button
+                    android:id="@+id/addIngredients"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:elevation="2dp"
+                    android:fontFamily="@font/open_sans"
+                    android:text="Add"
+                    android:textAllCaps="false"
+                    android:textColor="@color/main2" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ingredientsrecycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Add Instructions"
+                android:textColor="@color/pureblack"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingTop="15dp">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="2dp"
+                    android:background="@drawable/white_smcurv_border"
+                    app:contentPadding="0dp">
+
+                    <EditText
+                        android:id="@+id/addInstDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@android:color/transparent"
+                        android:inputType="textPersonName"
+                        android:padding="10dp"
+                        android:theme="@style/AppSearchView" />
+                </androidx.cardview.widget.CardView>
+                <Button
+                    android:id="@+id/addInst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:elevation="2dp"
+                    android:fontFamily="@font/open_sans"
+                    android:text="Add"
+                    android:textAllCaps="false"
+                    android:textColor="@color/main2" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/instrecycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

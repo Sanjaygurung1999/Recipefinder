@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".frags.Feed">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bottom_border"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/touploadrecipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat"
+            android:text="Upload Recipe +"
+            android:textColor="@color/main1"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/username_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center|right"
+            android:paddingRight="10dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/tosignup"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_account_circle_24px" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/feedrecycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:layout_weight="1"
+        android:background="#f6f7f9" />
+
+    <FrameLayout
+        android:id="@+id/popup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:backgroundTint="#6D373030"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/white_curv_border"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="visible">
+
+            <ImageButton
+                android:id="@+id/shutpopup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_arrow_back_ios_24px"
+                android:tint="@color/default_secondary" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/popuppicture"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_account_circle_24px" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/uploadpicture"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/main2"
+                android:fontFamily="@font/open_sans"
+                android:text="Upload Picture"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tosignout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="Sign Out"
+                android:textColor="@color/main4" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>
